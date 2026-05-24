@@ -1,65 +1,54 @@
-import Image from "next/image";
-
-export default function Home() {
+// src/app/page.tsx
+export default function ProfilePage() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <section className="space-y-8 animate-fade-in">
+      {/* Hero Section */}
+      <div className="border-b border-slate-800 pb-8">
+        <span className="px-3 py-1 text-xs font-mono bg-indigo-500/10 text-indigo-400 rounded-full border border-indigo-500/20">
+          UI/UX Designer & Web Developer
+        </span>
+        <h1 className="text-4xl md:text-5xl font-extrabold text-white mt-4 tracking-tight">
+          Halo, Saya <span className="bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Tomi Firdaus</span>
+        </h1>
+        <p className="text-lg text-slate-300 mt-4 leading-relaxed max-w-3xl">
+          Seorang siswa SMK jurusan **Rekayasa Perangkat Lunak (RPL)** yang memiliki privilese memadukan logika pemrograman yang presisi dengan estetika desain yang memikat. Fokus saya adalah menciptakan antarmuka digital yang tidak hanya berfungsi baik, tapi juga memberikan pengalaman pengguna yang tak terlupakan.
+        </p>
+      </div>
+
+      {/* Grid Informasi Detail */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {/* Identitas Sekolah */}
+        <div className="bg-slate-900/60 p-6 rounded-xl border border-slate-800">
+          <h3 className="text-lg font-bold text-white mb-4 flex items-center gap-2">
+            <span className="w-2 h-2 rounded-full bg-cyan-400"></span> Informasi Akademik
+          </h3>
+          <table className="w-full text-sm text-slate-300 space-y-2">
+            <tbody>
+              <tr className="border-b border-slate-800/50"><td className="py-2 font-medium text-slate-400">Nama Lengkap</td><td className="py-2 text-right">Tomi Firdaus</td></tr>
+              <tr className="border-b border-slate-800/50"><td className="py-2 font-medium text-slate-400">Kelas</td><td className="py-2 text-right">XI RPL 6</td></tr>
+              <tr className="border-b border-slate-800/50"><td className="py-2 font-medium text-slate-400">Nomor Absen</td><td className="py-2 text-right font-mono">32</td></tr>
+              <tr><td className="py-2 font-medium text-slate-400">Spesialisasi</td><td className="py-2 text-right text-indigo-400 font-medium">Frontend & UI/UX</td></tr>
+            </tbody>
+          </table>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+        {/* Fokus Hobi: Desain */}
+        <div className="bg-slate-900/60 p-6 rounded-xl border border-slate-800 flex flex-col justify-between">
+          <div>
+            <h3 className="text-lg font-bold text-white mb-2 flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-pink-400"></span> Passion & Hobi: Desain
+            </h3>
+            <p className="text-sm text-slate-300 leading-relaxed">
+              Bagi saya, desain bukan sekadar hobi, melainkan cara berkomunikasi visual. Saya aktif mengeksplorasi desain antarmuka aplikasi (UI/UX), ilustrasi vektor, serta penataan tipografi moderen. Keahlian ini membuat kode program yang saya bangun jauh lebih hidup dan berorientasi pada kenyamanan pengguna.
+            </p>
+          </div>
+          <div className="mt-4 flex gap-2">
+            <span className="text-xs px-2 py-1 bg-slate-800 rounded text-slate-400">Figma</span>
+            <span className="text-xs px-2 py-1 bg-slate-800 rounded text-slate-400">Wireframing</span>
+            <span className="text-xs px-2 py-1 bg-slate-800 rounded text-slate-400">Design System</span>
+          </div>
         </div>
-      </main>
-    </div>
+      </div>
+    </section>
   );
 }
